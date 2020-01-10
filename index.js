@@ -30,4 +30,15 @@ window.onload = () => {
     function changeBackground() {
         this.style.backgroundColor = sketchpadFillColor;
     }
+
+    // Clear Button
+    let clearButton = document.querySelector('#clear');
+    clearButton.addEventListener('click', clearSketchpad);
+
+    function clearSketchpad() {
+        for (let i = 0; i < pix.length; i++) {
+            pix[i].style.background = sketchpadBgColor;
+        }
+    }
+    
 }
